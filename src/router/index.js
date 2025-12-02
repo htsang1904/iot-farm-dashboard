@@ -98,33 +98,33 @@ export default new Router({
             ]
         },
 
-        // {
-        //     path: '*',
-        //     name: 'NotFound',
-        //     component: () => import(
-        //         /* webpackChunkName: "notfound" */
-        //         '@/containers/NotFound.vue'
-        //     ),
-        //     meta: {
-        //         title: '404'
-        //     },
-        //     beforeRouteLeave (to, from, next) {
-        //         window.location.href = '/#/dashboard';
-        //     }
-        // },
-        // {
-        //     path: '/503',
-        //     name: 'Unavailable',
-        //     component: () => import(
-        //         /* webpackChunkName: "Unavailable" */
-        //         '@/containers/Unavailable.vue'
-        //     ),
-        //     meta: {
-        //         title: 'Unavailable'
-        //     },
-        //     beforeRouteLeave (to, from, next) {
-        //         window.location.href = '/#/dashboard';
-        //     }
-        // }
+        {
+            path: '*',
+            name: 'NotFound',
+            component: () => import(
+                /* webpackChunkName: "notfound" */
+                '@/containers/NotFound.vue'
+            ),
+            meta: {
+                title: '404'
+            },
+            beforeRouteLeave (to, from, next) {
+                window.location.href = '/#/dashboard';
+            }
+        },
+        {
+            path: '/503',
+            name: 'Unavailable',
+            component: () => import(
+                /* webpackChunkName: "Unavailable" */
+                '@/containers/Unavailable.vue'
+            ),
+            meta: {
+                title: 'Unavailable'
+            },
+            beforeRouteLeave (to, from, next) {
+                window.location.href = '/#/dashboard';
+            }
+        }
     ],
 })

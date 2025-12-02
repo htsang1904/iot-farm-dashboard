@@ -1,0 +1,87 @@
+/* ==========================================================================
+   #PAGE
+   ========================================================================== */
+
+/**
+ * Simple page-level setup.
+ *
+ * 1. Set the default `font-size` and `line-height` for the entire project,
+ *    sourced from our default variables. The `font-size` is calculated to exist
+ *    in ems, the `line-height` is calculated to exist unitlessly.
+ * 2. Force scrollbars to always be visible to prevent awkward ‘jumps’ when
+ *    navigating between pages that do/do not have enough content to produce
+ *    scrollbars naturally.
+ * 3. Ensure the page always fills at least the entire height of the viewport.
+ */
+
+html {
+    font-size: ($global-font-size / 16px) * 1em; /* [1] */
+    line-height: $global-line-height / $global-font-size !important; /* [1] */
+    overflow-y: scroll; /* [2] */
+    min-height: 100%; /* [3] */
+    color: $global-color-text-primary !important;
+    height: 100%;
+}
+h1, h2, h3, h4, h5, h6, ul, ol, dl, blockquote, p, address, hr, table, fieldset, figure, pre {
+    margin-bottom: 0.6rem;
+}
+body {
+    color: inherit;
+    height: 100%;
+    min-height: 100%;
+}
+
+.el-pagination {
+    margin: 0;
+    padding: 0;
+    overflow: auto;
+    padding-bottom: 10px;
+    text-align: center;
+}
+.el-pagination.is-background .btn-next,
+.el-pagination.is-background .btn-prev,
+.el-pagination.is-background .el-pager li {
+    text-align: center;
+    vertical-align: middle;
+}
+.dx-tabpanel-container {
+    .dx-multiview-wrapper {
+        padding: 10px;
+    }
+}
+.dx-tabs-wrapper {
+    .dx-tab {
+        padding: 4px !important;
+    }
+}
+.container404 {
+    margin: 0 auto;
+    max-width: 500px;
+    text-align: center;
+    height: 100%;
+    position: relative;
+    color: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    .content {
+        a {
+            color: #fff;
+            text-decoration: underline;
+            font-weight: bold;
+        }
+
+        img {
+            margin-bottom: 15px;
+            max-width: 200px;
+        }
+
+        .copyright {
+            position: absolute;
+            bottom: 30px;
+            width: 100%;
+            text-align: center;
+        }
+    }
+}

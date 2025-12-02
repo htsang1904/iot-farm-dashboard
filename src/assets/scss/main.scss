@@ -1,14 +1,17 @@
-@import './base/app';
-@import './base/layout';
+@import "./settings/settings.global";
+@import './settings/settings.core';
 @import './variables.scss';
 
-* {
-    -webkit-box-sizing: border-box;
-    -moz-box-sizing: border-box;
-    box-sizing: border-box;
+@import './base/app';
+@import './base/layout';
+@import './base/page';
+
+$main-color: $mainColor;
+html {
+    overflow: hidden;
 }
 body {
-    padding: 0;
-    margin: 0;
+    background: $mainColor !important;
     overflow: hidden;
+    overscroll-behavior-x: none !important;
 }

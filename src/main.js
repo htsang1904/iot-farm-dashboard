@@ -11,6 +11,7 @@ import ElementUI from 'element-ui';
 import 'element-ui/lib/theme-chalk/index.css';
 import moment from 'moment'
 import '@/assets/scss/main.scss'
+import { $ } from './utils/$'
 
 moment.updateLocale('vi', {week: {dow: 1}})
 Vue.prototype.moment = moment
@@ -34,8 +35,56 @@ new Vue({
   render: h => h(App),
   data() {
     return {
-        ready: true,
+        ready: false,
         loading: false,
     }
   },
+  mounted() {
+    setTimeout(()=>{
+      this.ready = true
+      router.push('/login');
+    }, 2000)
+    // if (this.$authStored.isAuth && !this.$authStored.isHasProfile) {
+    //     this.$authStored.getProfile()
+    //         .then(res => {
+    //             let storeList = this.$authStored.storeList
+    //             if (storeList.count === 1) {
+    //                 this.$suiteStored.selectedStores = [storeList.stores[Object.keys(storeList.stores)[0]][0]]
+    //             } else {
+    //                 this.$suiteStored.selectedStores = Object.keys(storeList.stores).reduce((stores, brand) => {
+    //                     let brand_stores = this.$authStored.storeList.stores[brand]
+    //                     stores = stores.concat(brand_stores);
+    //                     return stores;
+    //                 }, [])
+    //             }
+    //             this.ready = true;
+    //             this.$socket.emit('staff_auth', getToken());
+    //             this.$OneSignal.sendTag('staff_id', this.$authStored.profile.id)
+    //     })
+    //         .catch((error) => {
+    //             this.ready = true;
+    //             if (error.response && error.response.status === 401) {
+    //                 this.$OneSignal.deleteTag('staff_id').then(res => {
+    //                     console.warn('Deleted Staff ID')
+    //                 })
+    //                 router.push('/login');
+    //             } else {
+    //                 router.push('/503');
+    //             }
+
+    //         })
+    //     this.loading = false;
+    // } else {
+    //     this.ready = true;
+    //     this.$OneSignal.deleteTag('staff_id').then(res => {
+    //         console.warn('Deleted Staff ID')
+    //     })
+    //     router.push('/login');
+    // }
+  },
+  watch: {
+    ready: (isReady) => {
+        $.triggerEvent(document.body, !isReady ? 'start-load' : 'end-load');
+    },
+  }
 }).$mount('#app')

@@ -1,18 +1,17 @@
 <template>
     <div class="main-wrapper" ref="mainWrapper" >
         <SideDrawer id="sideDrawer" ref="sideDrawer" v-if="$root.ready" ></SideDrawer>
-            <div class="left-wrapper" v-if="$root.ready">
-                <PageHeader @toogleSideDrawer="toogleSideDrawer" />
-                <DxScrollView show-scrollbar="onHover">
-                    <div class="content-wrapper" v-loading="$root.loading">
-                        <transition name="slide-fade">
-                            <router-view ref="contentPage" v-if="true"></router-view>
-                        </transition>
-                    </div>
-                    <PageFooter/>
-                </DxScrollView>
-            </div>
-
+        <div class="left-wrapper" v-if="$root.ready">
+            <PageHeader @toogleSideDrawer="toogleSideDrawer" />
+            <DxScrollView show-scrollbar="onHover">
+                <div class="content-wrapper" v-loading="$root.loading">
+                    <transition name="slide-fade">
+                        <router-view ref="contentPage" v-if="!$suiteStored.reRenderSuite"></router-view>
+                    </transition>
+                </div>
+                <PageFooter/>
+            </DxScrollView>
+        </div>
     </div>
 </template>
 
