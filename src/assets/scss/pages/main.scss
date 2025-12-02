@@ -1,0 +1,72 @@
+
+// SETTINGS
+@import "../element-variables.scss";
+@import "../variables.scss";
+@import "../base/settings/settings.global";
+@import "../base/settings/settings.core";
+// TOOLS
+@import "../base/tools/tools.clearfix";
+@import "../base/tools/tools.font-size";
+@import "../base/tools/tools.font-family";
+@import "../base/tools/tools.mq";
+@import "../base/tools/tools.rotate";
+@import "../base/tools/tools.disable-anchor";
+// GENERICS
+@import "../base/generics/generic.normalize";
+@import "../base/generics/generic.box-sizing";
+@import "../base/generics/generic.reset";
+@import "../base/generics/generic.shared";
+// ELEMENTS
+@import "../base/elements/fontfaces";
+@import "../base/elements/page";
+@import "../base/elements/label";
+@import "../base/elements/images";
+@import "../base/elements/table";
+@import "../base/elements/input";
+// OBJECTS
+@import "../base/objects/form";
+// UTILITIES
+@import "../base/utilities/text";
+@import "../base/utilities/cursor";
+@import "../base/utilities/display";
+@import "../base/utilities/float";
+@import "../base/utilities/clearfix";
+@import "../base/utilities/responsive-spacings";
+@import "../base/utilities/widths";
+@import "../base/utilities/widths-with-breakpoints";
+@import "../base/utilities/spacings";
+@import "../base/utilities/print";
+@import "../base/utilities/hide";
+@import "../base/utilities/vertical";
+@import "../base/utilities/height";
+@import "../base/utilities/rotate";
+// COMPONENTS
+@import "../base/components/alert";
+@import "../base/components/button-box";
+@import "../base/components/buttons";
+@import "../base/components/labels";
+@import "../base/components/checkbox";
+@import "../base/components/filter-panel";
+@import "../base/mixins/all";
+@import "../base/others/mobile-friendly";
+@import "../base/others/app";
+@import "../base/others/layout";
+@import "../base/others/box";
+@import "../base/others/modal";
+@import "../base/others/table";
+@import "./report.scss";
+@import "./reward.scss";
+@import "./inventory.scss";
+@import "./others.scss";
+@import "../addon.scss";
+
+$main-color: $mainColor;
+html {
+    overflow: hidden;
+}
+body {
+    background: $mainColor !important;
+    overflow: hidden;
+    overscroll-behavior-x: none !important;
+}
+

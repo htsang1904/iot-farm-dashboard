@@ -1,0 +1,64 @@
+.c-login-wrapper {
+    max-width: 400px;
+    margin: 0 auto;
+    padding: 0 10px 0;
+}
+.c-login__logo{
+    display: inline-block;
+    width: 250px;
+    margin-bottom: 10px;
+}
+.c-login-box {
+    width: 100%;
+    background: #fff;
+    padding: 30px;
+    border-radius: 15px;
+    display: inline-block;
+    vertical-align: middle;
+    text-align: left;
+    box-shadow: 0 2px 5px 0 rgba(0, 0, 0, .1);
+
+
+    &__title {
+        margin-bottom: 10px;
+        text-align: center;
+        font-size: 22px;
+        font-weight: bold;
+    }
+    &__label {
+        font-size: 16px;
+        display: block;
+        color: $global-color-gray-light;
+        input {
+            margin-top: 10px;
+        }
+    }
+    &__remember {
+        font-size: 15px;
+    }
+    &__input {
+        height: 56px !important;
+        line-height: 56px !important;
+        padding: 8px 16px !important;
+    }
+    &__field-error-message {
+        margin-top: 10px;
+        color: $global-color-danger;
+    }
+    &__block {
+        position: relative;
+    }
+    &__block + &__block {
+        margin-top: 20px;
+    }
+    button[type=submit] {
+        min-width: 235px;
+    }
+
+    fieldset{
+        margin-bottom: 0;
+    }
+    .el-alert {
+        margin-bottom: 10px;
+    }
+}

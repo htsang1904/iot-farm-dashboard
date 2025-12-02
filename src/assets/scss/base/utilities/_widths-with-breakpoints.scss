@@ -1,0 +1,18 @@
+/**
+ * If we’re using Sass-MQ, automatically generate grid system(s) for each of our
+ * defined breakpoints, and give them a Responsive Suffix, e.g.:
+ *
+ * <div class="u-3/12@mobile">
+ */
+
+@if (variable-exists(mq-breakpoints)) {
+
+    @each $bp-name, $bp-value in $mq-breakpoints {
+
+        @include mq($from: $bp-name) {
+            @include widths-builder($widths-fractions, #{$widths-breakpoint-separator}#{$bp-name});
+        }
+
+    }
+
+}

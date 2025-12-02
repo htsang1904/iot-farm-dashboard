@@ -1,0 +1,112 @@
+$form-control-color: #4d4d4d;
+$form-control-placeholder-color: #A6A6A6;
+$form-control-inactive-color: #e9ecef;
+
+.o-form-control {
+    display: block;
+    width: 100%;
+    padding: round(2 * $global-spacing-margin-unit);
+    color: $form-control-color;
+    background-color: #fff;
+    background-image: none;
+    background-clip: padding-box;
+    border: 1px solid $global-color-line;
+    border-radius: $global-radius;
+    outline: none;
+    transition: border-color ease-in-out 0.15s, box-shadow ease-in-out 0.15s;
+    font-size: 18px;
+    font-weight: normal;
+
+    &:not(textarea) {
+        height: 44px;
+    }
+    &::-ms-expand {
+        background-color: transparent;
+        border: 0;
+    }
+    &:focus {
+        color: #495057;
+        background-color: #fff;
+        outline: none;
+    }
+    &::-webkit-input-placeholder {
+        color: $form-control-placeholder-color;
+        opacity: 1;
+        font-size: 18px;
+        font-weight: normal;
+    }
+    &::-moz-placeholder {
+        color: $form-control-placeholder-color;
+        opacity: 1;
+        font-size: 18px;
+        font-weight: normal;
+    }
+    &:-ms-input-placeholder {
+        color: $form-control-placeholder-color;
+        opacity: 1;
+        font-size: 18px;
+        font-weight: normal;
+    }
+    &:-moz-placeholder {
+        color: $form-control-placeholder-color;
+        opacity: 1;
+        font-size: 18px;
+        font-weight: normal;
+    }
+    &::placeholder {
+        color: $form-control-placeholder-color;
+        opacity: 1;
+        font-size: 18px;
+        font-weight: normal;
+    }
+    &:disabled,
+    &[readonly] {
+        background-color: $form-control-inactive-color;
+        opacity: 1;
+    }
+}
+
+.o-form-control {
+    &--no-resize {
+        resize: none;
+    }
+    &--resize-hoz {
+        resize: horizontal;
+    }
+    &--resize-vertical {
+        resize: vertical;
+    }
+}
+
+select.o-form-control {
+    &:not([size]):not([multiple]) {
+        height: calc(2.25rem + 2px);
+    }
+    &:focus::-ms-value {
+        color: #495057;
+        background-color: #fff;
+    }
+}
+
+textarea {
+    height: auto;
+}
+
+.o-form-control--sm {
+    height: 32px !important;
+    padding: 8px 18px !important;
+    font-size: 1rem;
+}
+
+select.o-form-control--sm:not([size]):not([multiple]) {
+    height: calc(1.8125rem + 2px);
+}
+
+.o-form-control--lg {
+    height: 56px !important;
+}
+
+.o-form-text {
+    display: block;
+    margin-top: 0.25rem;
+}

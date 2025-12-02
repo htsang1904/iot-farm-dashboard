@@ -1,0 +1,85 @@
+/**
+ * 1. Allow us to style box model properties.
+ * 2. Line different sized buttons up a little nicer.
+ * 3. Make buttons inherit font styles (often necessary when styling `input`s as
+ *    buttons).
+ * 4. Reset/normalize some styles.
+ */
+
+$global-label-default-bg-color: #FFFFFF !default;
+$global-label-default-border-color: #4A90E2 !default;
+
+$global-label-success-bg-color: $global-color-success !default;
+$global-label-success-border-color: #229251 !default;
+
+$global-label-info-bg-color: $global-color-info !default;
+$global-label-info-border-color: #0076FF !default;
+
+$global-label-gray-bg-color: $global-color-gray-light !default;
+$global-label-gray-border-color: #8C939A !default;
+
+$global-label-gray-light-bg-color: #EAF0F6 !default;
+$global-label-gray-light-border-color: $global-color-gray-light !default;
+
+$global-label-font-size: 12px !default;
+
+.c-label {
+    color: $global-label-default-border-color;
+    display: inline-block; /* [1] */
+    vertical-align: middle; /* [2] */
+    font: inherit; /* [3] */
+    font-size: $global-label-font-size;
+    font-weight: bold;
+    text-align: center; /* [4] */
+    margin: 0; /* [4] */
+    padding: 5px 9px;
+    min-width: 67px;
+
+    box-sizing: border-box;
+    border: none;
+    border-radius: $global-radius;
+
+    line-height: 1;
+    background-color: $global-label-default-bg-color;
+
+    transition: $global-transition;
+}
+
+/* Style variants
+   ========================================================================== */
+
+.c-label--default{
+    color: $global-color-text-primary;
+    border: 1px solid $global-color-text-primary;
+}
+.c-label--light{
+    font-weight: 200;
+}
+.c-label--primary {
+    color: $global-color-info;
+    border: 1px solid $global-color-info;
+}
+
+.c-label--success {
+    background-color: $global-label-success-bg-color;
+    border-color: $global-label-success-border-color;
+    color: #FFFFFF;
+}
+
+.c-label--info {
+    background-color: $global-label-info-bg-color;
+    border-color: $global-label-info-border-color;
+    color: #FFFFFF;
+}
+
+.c-label--gray {
+    background-color: $global-label-gray-bg-color;
+    border-color: $global-label-gray-border-color;
+    color: #FFFFFF;
+}
+
+.c-label--gray-light {
+    background-color: $global-label-gray-light-bg-color;
+    border-color: $global-label-gray-light-border-color;
+    color: $global-color-text-primary;
+}

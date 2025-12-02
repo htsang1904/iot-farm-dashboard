@@ -1,0 +1,7 @@
+$directions: ("up", "left-up", "left", "left-down", "down", "right-down", "right", "right-up");
+
+@each $direction in $directions {
+    .u-rotate--#{$direction} {
+        @include rotate($direction);
+    }
+}

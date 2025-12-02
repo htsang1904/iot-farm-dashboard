@@ -1,0 +1,86 @@
+.filter-panel {
+    max-width: 100%;
+    overflow: hidden;
+    background: #fff;
+    padding: 15px;
+    min-height: 50px;
+    height: 50px;
+    transition: min-height 300ms cubic-bezier(0.4, 0, 0.2, 1);
+    &.expanded {
+        min-height: 350px;
+        height: 100%;
+        &.custom {
+            min-height: 400px;
+        }
+    }
+    .panel-container {
+        max-width: 700px;
+        margin: auto;
+    }
+    .panel-title {
+        font-weight: bold;
+        font-size: 16px;
+        margin-bottom: 10px;
+    }
+    .el-row {
+        margin: 10px 0;
+    }
+    .el-checkbox {
+        margin-right: 10px;
+        padding-right: 10px;
+        font-weight: bold;
+    }
+    .el-radio--medium {
+        margin-right: 10px;
+        font-weight: bold;
+    }
+    .create-btn {
+        margin-top: 10px;
+        width: 100%;
+        font-weight: bold;
+    }
+    .selected-stores {
+        background: $mainColor;
+        color: #fff;
+        padding: 10px;
+        border-radius: 5px;
+        font-weight: bold;
+        cursor: pointer;
+    }
+    .vss {
+        height: 250px;
+        .vss-list {
+            .vss-inner-list {
+                box-shadow: 0px 0px 3px #cccccc;
+            }
+            .vss-list-ul {
+                padding: 5px  !important;
+                li:not(.is-parent) > span {
+                    padding: 5px;
+                }
+                li.active:not(.is-parent) > span {
+                    background-color: $mainColor;
+                    padding: 5px;
+                    word-break: break-all;
+                }
+            }
+        }
+        @media (max-width:600px) {
+            .vss-span {
+                display: none;
+            }
+        }
+
+    }
+    .el-checkbox.is-bordered {
+        margin-left: 0 !important;
+    }
+
+}
+.right-btns {
+    float: right;
+}
+.have-right-btns {
+    margin-bottom: 10px;
+    margin-right: 5px;
+}

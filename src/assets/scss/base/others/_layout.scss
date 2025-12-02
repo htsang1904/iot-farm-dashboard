@@ -1,8 +1,19 @@
 @charset "UTF-8";
-@import "../variables.scss";
-@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+@import "../../variables";
+@font-face {
+	font-family: 'Cimi';
+	src: local('☺'), url('/fonts/Montserrat-Regular.woff') format('woff'), url('/fonts/Montserrat-Regular.ttf') format('truetype');
+	font-weight: normal;
+	font-style: normal;
+}
+@font-face {
+	font-family: 'Cimi';
+	src: local('☺'), url('/fonts/Montserrat-Bold.woff') format('woff'), url('/fonts/Montserrat-Bold.ttf') format('truetype');
+	font-weight: bold;
+	font-style: normal;
+}
 body {
-    font-family: 'Montserrat', sans-serif !important;
+    font-family: 'Cimi', sans-serif !important;
     letter-spacing: -.5px;
     &.show-drawer {
         @media (min-width: 1200px) {
@@ -113,7 +124,7 @@ button:focus {
     padding: 55px 0 0;
     box-sizing: border-box;
     .main-menu-scrollable {
-        height: calc(100%);
+        height: calc(100% - 60px);
         background-color: #f9f9f9;
         border-right: 1px solid #eaeaea !important;
     }

@@ -1,0 +1,18 @@
+.cke_sourcearea {
+    background-color: #f0f0f0; /* Nền màu xám sáng cho vùng code */
+    color: #333333; /* Màu chữ đen cho các thẻ */
+    font-family: monospace; /* Phông chữ monospace để dễ đọc mã */
+    font-size: 14px; /* Kích thước chữ dễ đọc */
+}
+
+.cke_sourcearea .tag {
+    color: #007bff; /* Màu xanh cho các thẻ HTML */
+}
+
+.cke_sourcearea .attr {
+    color: #28a745; /* Màu xanh lá cho các thuộc tính */
+}
+
+.cke_sourcearea .value {
+    color: #dc3545; /* Màu đỏ cho giá trị thuộc tính */
+}

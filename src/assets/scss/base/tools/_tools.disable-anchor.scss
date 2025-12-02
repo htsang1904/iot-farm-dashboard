@@ -1,0 +1,8 @@
+@mixin disable-anchor() {
+    color: $global-color-text-secondary;
+    cursor: default;
+
+    &:hover, &:active, &:focus {
+        color: $global-color-text-secondary;
+    }
+}

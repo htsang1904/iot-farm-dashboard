@@ -1,0 +1,8 @@
+.c-buttonBox {
+    .o-box + & {
+        margin-top: 24px;
+    }
+    &--right {
+        text-align: right;
+    }
+}

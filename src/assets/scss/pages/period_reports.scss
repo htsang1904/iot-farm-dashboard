@@ -1,0 +1,147 @@
+@page {
+    margin: 0;
+    padding: 0;
+}
+html{
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    color: #000;
+    /* background: #fff; */
+    font-family:  'Cimi', sans-serif;
+    margin-top: 0 !important;
+}
+
+.page-break {
+    /* display: block;
+    page-break-before: always;
+    position: relative; */
+}
+
+.print {
+    margin: 0;
+    position: relative;
+    box-sizing: border-box;
+    page-break-after: always;
+    color: #000;
+}
+
+.print h1 {
+    font-size: 2em;
+    margin: 0.67em 0;
+}
+
+.print figcaption,
+.print figure,
+.print main {
+    display: block;
+}
+
+.print figure {
+    margin: 1em 40px;
+}
+
+.print hr {
+    box-sizing: content-box;
+    height: 0;
+    overflow: visible;
+}
+
+.print a {
+    background-color: transparent;
+    -webkit-text-decoration-skip: objects;
+}
+
+.print b,
+.print strong {
+    font-weight: bolder;
+}
+
+.print code,
+.print kbd,
+.print samp {
+    font-family: monospace, monospace;
+    font-size: 1em;
+}
+
+.print dfn {
+    font-style: italic;
+}
+
+.print mark {
+    background-color: #ff0;
+    color: #000;
+}
+
+.print small {
+    font-size: 80%;
+}
+
+.print sub,
+.print sup {
+    font-size: 75%;
+    line-height: 0;
+    position: relative;
+    vertical-align: baseline;
+}
+
+.print sub {
+    bottom: -0.25em;
+}
+
+.print sup {
+    top: -0.5em;
+}
+
+.print img {
+    border-style: none;
+}
+
+.print svg:not(:root) {
+    overflow: hidden;
+}
+
+.print [hidden] {
+    display: none;
+}
+
+.print, .print *, .print *:before, .print *:after {
+    -webkit-box-sizing: inherit;
+    -moz-box-sizing: inherit;
+    box-sizing: inherit;
+}
+
+.print h1, .print h2, .print h3, .print h4, .print h5, .print h6,
+.print blockquote, .print p, .print pre,
+.print dl, .print dd, .print ol, .print ul,
+.print figure,
+.print hr {
+    margin: 0;
+    padding: 0;
+}
+
+.print li > ol, .print li > ul {
+    margin-bottom: 0;
+}
+
+.print table {
+    border-collapse: collapse;
+    border-spacing: 0;
+    min-width: 100%;
+}
+h2, h3 {
+    font-size: 18px;
+    font-weight: bold;
+}
+.c-invoice {
+
+    &__header, &__footer {
+        text-align: center;
+    }
+
+    .hr-bold {
+        border-top: 2px solid #000000;
+    }
+}

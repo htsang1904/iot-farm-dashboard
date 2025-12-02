@@ -1,0 +1,27 @@
+input {
+    outline: none;
+    box-shadow: none;
+
+    &[type=checkbox] {
+        width: 18px;
+        height: 18px;
+        transform: scale(1.1);
+        display: inline-block;
+        vertical-align: middle;
+    }
+}
+
+input, textarea, select, button {
+    letter-spacing: normal;
+    word-spacing: normal;
+    text-transform: none;
+    text-indent: 0;
+    text-shadow: none;
+    display: inline-block;
+    text-align: start;
+
+    &:active, &:focus {
+        outline: none;
+        box-shadow: none;
+    }
+}

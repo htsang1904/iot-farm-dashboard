@@ -1,0 +1,30 @@
+.shipping-box {
+    position: relative;
+    background: #fff;
+    padding: 10px;
+    margin-bottom: 10px;
+    border-radius: 10px;
+    min-height: 50px;
+    box-shadow: 0px 0px 8px 1px rgba(0, 0, 0, 0.05);
+}
+.shipping-status {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    padding: 5px 10px;
+    background: #000;
+    color: #fff;
+    border-radius: 10px 0 10px 0;
+    &.submited, &.assigning {
+        background: #e6a23c;
+    }
+    &.canceled {
+        background: #909399;
+    }
+    &.assigned, &.picked {
+        background: #22aae3;
+    }
+    &.completed {
+        background: #4893d2;
+    }
+}

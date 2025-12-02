@@ -1,0 +1,207 @@
+/**
+ * 1. Allow us to style box model properties.
+ * 2. Line different sized buttons up a little nicer.
+ * 3. Make buttons inherit font styles (often necessary when styling `input`s as
+ *    buttons).
+ * 4. Reset/normalize some styles.
+ * 5. Force all button-styled elements to appear clickable.
+ */
+
+$global-button-default-bg-color: #FFFFFF !default;
+$global-button-default-border-color: $global-color-text-primary !default;
+$global-button-black-border-color: #000 !default;
+$global-button-success-bg-color: $global-color-success !default;
+$global-button-success-border-color: #229251 !default;
+
+$global-button-info-bg-color: $global-color-info !default;
+$global-button-info-border-color: #4A90E2 !default;
+
+$global-button-gray-bg-color: $global-color-gray-light !default;
+$global-button-gray-border-color: #8C939A !default;
+$global-button-gray-border-light-color: #EEEEEE !default;
+
+$global-button-gray-light-bg-color: #EAF0F6 !default;
+$global-button-blue-login-bg-color: #67B2FC !default;
+$global-button-gray-light-border-color: $global-color-gray-light !default;
+
+$global-button-font-size: 16px !default;
+$global-button-font-size-small: 14px !default;
+$global-button-height: 42px !default;
+$global-button-width: 170px !default;
+
+$global-button-small-height: 28px !default;
+$global-button-disabled-opacity: 0.4;
+
+.c-btn {
+    color: $global-color-text-primary;
+    display: inline-block; /* [1] */
+    vertical-align: middle; /* [2] */
+    font: inherit; /* [3] */
+    font-size: $global-button-font-size;
+    text-align: center; /* [4] */
+    margin: 0; /* [4] */
+    cursor: pointer;
+    /* [5] */
+    border: 1px solid $global-button-default-border-color;
+    border-radius: $global-radius;
+
+    height: $global-button-height;
+    min-width: $global-button-width;
+    line-height: 1;
+    background-color: $global-button-default-bg-color;
+
+    padding: round(($global-button-height - $global-button-font-size) / 2) (2 * $global-spacing-margin-unit);
+
+    &,
+    &:hover,
+    &:active,
+    &:focus {
+        text-decoration: none;
+        outline: none;
+        color: $global-color-text-primary;
+    }
+
+    &__icon {
+        margin-right: 8px;
+    }
+}
+
+/* Style variants
+   ========================================================================== */
+.c-btn--link {
+    border-color: transparent;
+    background-color: transparent;
+    border-radius: 0;
+}
+
+.c-btn--success {
+    background-color: $global-button-success-bg-color;
+    border-color: $global-button-success-border-color;
+    color: #FFFFFF;
+
+    &,
+    &:hover,
+    &:active,
+    &:focus {
+        color: #FFFFFF;
+    }
+}
+
+.c-btn--info {
+    background-color: $global-button-info-bg-color;
+    border-color: $global-button-info-border-color;
+    color: #FFFFFF;
+
+    &,
+    &:hover,
+    &:active,
+    &:focus {
+        color: #FFFFFF;
+    }
+
+    &.c-btn--soft {
+        color: $global-button-info-border-color;
+    }
+}
+
+.c-btn--gray {
+    background-color: $global-button-gray-bg-color;
+    border-color: $global-button-gray-border-color;
+    color: #FFFFFF;
+
+    &,
+    &:hover,
+    &:active,
+    &:focus {
+        color: #FFFFFF;
+    }
+}
+
+.c-btn--gray-light {
+    background-color: $global-button-gray-light-bg-color;
+    border-color: $global-button-gray-light-border-color;
+    color: $global-color-text-primary;
+
+    &,
+    &:hover,
+    &:active,
+    &:focus {
+        color: $global-color-text-primary;
+    }
+}
+
+.c-btn--danger {
+    background-color: #FFFFFF;
+    border-color: $global-color-danger;
+    color: $global-color-danger;
+
+    &,
+    &:hover,
+    &:active,
+    &:focus {
+        color: $global-color-danger;
+    }
+}
+
+.c-btn--soft {
+    background-color: #FFFFFF !important;
+}
+
+.c-btn--showPass {
+    border: none;
+    position: absolute;
+    right: 20px;
+    margin: 0;
+    bottom: 18px;
+    cursor: pointer;
+}
+
+/* Size variants
+   ========================================================================== */
+
+.c-btn--small {
+    height: $global-button-small-height;
+    padding: round(($global-button-small-height - $global-button-font-size) / 2) (2 * $global-spacing-margin-unit);
+    min-width: auto;
+    font-size: $global-button-font-size-small;
+}
+
+.c-btn--medium {
+    min-width: 235px;
+    font-size: 16px;
+    font-weight: 500;
+}
+
+.c-btn--full {
+    width: 100%;
+}
+
+.c-btn--disabled {
+    opacity: $global-button-disabled-opacity;
+    cursor: not-allowed;
+}
+
+.c-btn--add {
+    width: 212px;
+}
+
+.c-btn--modal {
+    width: 207px;
+}
+
+/* Others buttons
+   ========================================================================== */
+
+.c-btn--editor-add-image {
+    min-width: 172px;
+}
+
+.c-btn--schedule-form-submit {
+    min-width: 235px;
+    min-height: 43px;
+}
+
+.el-button {
+    box-shadow: 0px 0px 2px 0px rgba(0, 0, 0, 0.05);
+    font-weight: bold;
+}

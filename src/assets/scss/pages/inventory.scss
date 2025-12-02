@@ -1,0 +1,159 @@
+@import '~@/assets/scss/variables.scss';
+.inventory-input-panel {
+    container-type: inline-size;
+    height: 100%;
+    .panel-wrapper {
+        display: flex;
+        flex-direction: row;
+        height: 100%;
+        overflow: hidden;
+        .left-panel {
+            width: 65%;
+            border-right: 1px solid #eaeaea;
+            height: 100%;
+            overflow-y: auto;
+            .left-container {
+                padding: 10px;
+            }
+            .filter-bar {
+                display: flex;
+                flex-direction: row;
+                justify-content: space-between;
+                align-items: center;
+                margin-bottom: 10px;
+                .inline-input {
+                    width: 100%;
+                    .el-input__inner {
+                        box-shadow: 0 1px 3px rgba(0, 0, 0, 0.05);
+                        font-weight: bold;
+                        height: 44px;
+                    }
+                }
+            }
+            .box.report-box {
+                box-shadow: 0 1px 3px rgba(0, 0, 0, 0.05);
+            }
+        }
+        .right-panel {
+            flex: 1;
+            // background-color: rgba(255, 255, 255, 0.5);
+            position: relative;
+            padding: 10px;
+            .inward-form {
+                padding: 10px;
+            }
+            .total-amount {
+                border: 1px solid $mainColor;
+                border-radius: 5px;
+                padding: 10px;
+                background: $mainColor;
+                color: #fff;
+                .total-quantity {
+                    padding: 2px 5px;
+                    border-radius: 5px;
+                    margin-right: 5px;
+                    font-weight: normal !important;
+                    font-size: 12px;
+                    color: #666 !important;
+                    background: #fff;
+                }
+                .amount-value {
+                    float: right;
+                    font-weight: bold;
+                    font-size: 15px;
+                }
+                &.out {
+                    background: #ffdb83;
+                    border-color: $gutaYellow;
+                    color: #333;
+                }
+            }
+            .footer-btns {
+                position: absolute;
+                bottom: 0;
+                left: 0;
+                width: 100%;
+                padding: 10px;
+                border-top: 1px solid #eaeaea;
+                background: #fff;
+                display: flex;
+                .el-button {
+                    width: 150px;
+                    &.finished-btn {
+                        flex: 1;
+                    }
+                }
+            }
+        }
+    }
+    @container (max-width: 600px) {
+        .panel-wrapper {
+            flex-direction: column;
+            height: 100%;
+            overflow: scroll;
+            padding-bottom: 100px;
+            .left-panel {
+                width: 100%;
+                overflow-y: unset;
+                .vertical-scroll {
+                    height: unset;
+                    overflow: hidden;
+                }
+            }
+            .right-panel {
+                border-top: 1px solid #eaeaea;
+                .footer-btns {
+                    position: fixed;
+                }
+            }
+        }
+
+        .left-panel,  #leftScroll, .dx-scrollable-wrapper, .dx-scrollable-container, .dx-scrollable-content {
+            height: fit-content !important;
+        }
+
+    }
+}
+.ticket-quick-detail {
+    padding: 10px 0 !important;
+    .common-data-box {
+        border-radius: 0 !important;
+        border-left-width: 0 !important;
+        border-right-width: 0 !important;
+    }
+    .quick-buttons {
+        padding: 0 10px;
+    }
+}
+.quick-detail-ticket {
+    padding: 0 10px 5px;
+    line-height: 1.5;
+    span.quantity {
+        border: 1px solid #eaeaea;
+        padding: 2px 5px;
+        border-radius: 5px;
+        margin-right: 5px;
+        font-weight: normal !important;
+        font-size: 12px;
+        color: #666 !important;
+    }
+}
+.inventory-ticket-modal {
+    .el-dialog__body {
+        padding: 0 !important;
+        overflow: hidden !important;
+    }
+    .ticket-wrapper {
+        padding: 0;
+        height: 100%;
+    }
+}
+
+.quantity-diff {
+    &.danger {
+        color: rgb(200, 13, 13);
+    }
+    &.warning {
+        color: rgb(205, 178, 0);
+    }
+}

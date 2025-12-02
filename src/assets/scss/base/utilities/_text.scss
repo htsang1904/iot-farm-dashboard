@@ -1,0 +1,141 @@
+$pixelFontSizes: 14 15 16 18 20;
+.u-text {
+    // Colors
+    &--primary {
+        color: $global-color-text-primary !important;
+    }
+    &--secondary {
+        color: $global-color-text-secondary !important;
+    }
+    &--muted {
+        color: $global-color-text-muted !important;
+    }
+    &--info {
+        color: $global-color-info !important;
+    }
+    &--success {
+        color: $global-color-success !important;
+    }
+    &--danger {
+        color: $global-color-danger !important;
+    }
+    &--gray-light {
+        color: $global-color-gray-light !important;
+    }
+    &--gray-lighter {
+        color: $global-color-gray-lighter !important;
+    }
+    &--space {
+        margin-left: 10px;
+
+        &-less {
+            margin-left: 7px;
+        }
+    }
+
+    // Font weight
+    &--light {
+        font-weight: 200 !important;
+    }
+    &--bold {
+        font-weight: bold !important;
+    }
+    &--medium {
+        font-weight: 500 !important;
+    }
+    // Sizes
+    @each $fontSizePx in $pixelFontSizes {
+        &--size-#{$fontSizePx} {
+            font-size: #{$fontSizePx}px !important;
+        }
+    }
+    &--size-0\.4 {
+        font-size: 0.4rem !important;
+    }
+    &--size-0\.5 {
+        font-size: 0.5rem !important;
+    }
+    &--size-0\.6 {
+        font-size: 0.6rem !important;
+    }
+    &--size-0\.7 {
+        font-size: 0.7rem !important;
+    }
+    &--size-0\.8,
+    &--small {
+        font-size: 0.8rem !important;
+    }
+    &--size-1\.2 {
+        font-size: 1.2rem !important;
+    }
+    &--size-1\.3 {
+        font-size: 1.3rem !important;
+    }
+    &--size-1\.4 {
+        font-size: 1.4rem !important;
+    }
+
+    // Align
+    &--left {
+        text-align: left !important;
+    }
+    &--right {
+        text-align: right !important;
+    }
+    &--center {
+        text-align: center !important;
+    }
+    &--truncate {
+        white-space: nowrap !important;
+        overflow: hidden !important;
+        text-overflow: ellipsis !important;
+    }
+    &--no-wrap {
+        white-space: nowrap !important;
+    }
+    // Others
+    &--hidden {
+        font-size: 0 !important;
+    }
+    &--fit {
+        line-height: 1 !important;
+    }
+    &--underline {
+        text-decoration: underline !important;
+    }
+    &--underline-spacing {
+        border-bottom: 1px solid;
+    }
+    &--underline-spacing-bold {
+        border-bottom: 2px solid;
+    }
+    &--clickable {
+        cursor: pointer !important;
+    }
+    &--no-clickable {
+        cursor: default !important;
+    }
+
+    &--not-allowed {
+        cursor: not-allowed !important;
+    }
+
+    &--no-selectable {
+        -webkit-user-select: none !important;
+        -moz-user-select: none !important;
+        -ms-user-select: none !important;
+        user-select: none !important;
+    }
+    &--blur {
+        opacity: 0.4 !important;
+    }
+    &--no-wrap {
+        white-space: nowrap !important;
+    }
+    &--line-through {
+        text-decoration: line-through;
+    }
+}
+.text-bold {
+    font-weight: bold !important;
+}

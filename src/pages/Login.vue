@@ -1,15 +1,14 @@
 <template>
-
     <div class="c-login-wrapper">
         <img src="/images/suitelogo.svg" alt="Suite App" class="c-login__logo">
         <div class="c-login-box" v-robot-loading="loading">
-            <div class="c-login-box__title"></div>
+            <div class="c-login-box__title">Đăng nhập Smart Farm</div>
             <el-alert v-if="error && !loading" :title="error.message" type="error" effect="dark">
             </el-alert>
             <DxForm :form-data="form" label-mode="floating" ref="loginform">
                 <DxGroupItem>
                     <DxItem data-field="username" :editor-options="{ height: 40 }">
-                        <DxLabel text="$t('login_username')" />
+                        <DxLabel text="Tài khoản" />
                         <DxRequiredRule message="$t('username_required')" />
                     </DxItem>
                     <DxItem data-field="password" :editor-options="{
@@ -27,14 +26,14 @@
                             },
                         }],
                     }">
-                        <DxLabel text="$t('login_password')" />
+                        <DxLabel text="Mật khẩu" />
                         <DxRequiredRule message="$t('please_enter_password')" />
                     </DxItem>
-                    <DxItem data-field="remember_me" :editor-options="{ text: 'keep_logged_in' }">
+                    <DxItem data-field="remember_me" :editor-options="{ text: 'Duy trì trạng thái đăng nhập' }">
                         <DxLabel text="" :visible="false" />
                     </DxItem>
                     <DxButtonItem :use-submit-behavior="true" cssClass='login-btn' :button-options="{
-                        text: 'login',
+                        text: 'Đăng nhập',
                         type: 'success',
                         onClick: () => {
                             this.requestLogin();
@@ -44,22 +43,16 @@
             </DxForm>
             <div class="c-login-box__footer">
                 <div class="c-login-box__forget">
-                    <a href="#" @click.stop="showResetPasswordPopup">forgot_password?</a>
+                    <a href="#" @click.stop="showResetPasswordPopup">Quên mật khẩu?</a>
                 </div>
-                <!-- <div class="navbar-lang">
-                    <select id="lang-select" v-model="lang" @change="switchLang" class="lang-select">
-                        <option value="vi">Tiếng Việt</option>
-                        <option value="en">English</option>
-                    </select>
-                </div> -->
             </div>
         </div>
         <div class="auth-small-logo">
-            'developed_by'
+            Phát triển bởi
             <img src="/images/white-logo.svg" alt="Powered by Cimi.vn">
         </div>
 
-        <SuitePopup :title="$t('recover_password')" width="300px" height="300px" :resizeEnabled="false"
+        <!-- <SuitePopup title="$t('recover_password')" width="300px" height="300px" :resizeEnabled="false"
             :visible.sync="showResetPassword" @opened="onShown" :canFullScreen=false>
             <div>
                 <DxForm :form-data="resetPwData" label-mode="floating" ref="templateForm">
@@ -76,7 +69,7 @@
                         <DxItem data-field="email" :editor-options="{
                             height: 40
                         }">
-                            <DxRequiredRule :message="$t('please_enter_email')" />
+                            <DxRequiredRule message="$t('please_enter_email')" />
                             <DxEmailRule message="Email không hợp lệ" />
                         </DxItem>
                     </DxGroupItem>
@@ -90,14 +83,14 @@
                     <el-button size="medium" @click="onClose"> close</el-button>
                 </div>
             </template>
-        </SuitePopup>
+        </SuitePopup> -->
     </div>
 
 </template>
 
 <script>
 import { $ } from '@/utils'
-// import '@/assets/scss/pages/login.scss';
+import '@/assets/scss/pages/login.scss';
 import has from 'lodash-es/has';
 export default {
     name: 'login',
@@ -122,10 +115,6 @@ export default {
     },
 
     methods: {
-        switchLang() {
-            this.$i18n.locale = this.lang;
-            localStorage.setItem('lang', this.lang);
-        },
         requestLogin() {
             let validate = this.$refs.loginform.instance.validate();
             if (validate.isValid) {
@@ -185,11 +174,6 @@ export default {
     mounted() {
         $.addClass(document.body, 'p-login');
         document.addEventListener("keyup", this.onKeyUp, false)
-        const savedLang = localStorage.getItem('lang');
-        if (savedLang) {
-            this.lang = savedLang;
-            this.$i18n.locale = savedLang;
-        }
     },
     beforeDestroy() {
         document.removeEventListener("keyup", this.onKeyUp, false)

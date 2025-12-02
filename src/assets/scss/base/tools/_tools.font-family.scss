@@ -1,0 +1,15 @@
+@mixin font-family($locale, $additionFont: '') {
+    $font: '';
+
+    @if ($locale == 'en') {
+        $font: "Helvetica Neue", Helvetica, Arial, sans-serif !important;
+    } @else {
+        $font: "Helvetica Neue", Helvetica, Arial, sans-serif !important;
+    }
+
+    @if ($additionFont != '') {
+        font-family: $additionFont, $font;
+    } @else {
+        font-family: $font;
+    }
+}

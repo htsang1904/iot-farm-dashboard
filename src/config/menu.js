@@ -7,19 +7,19 @@ const menu = [
         showHome: false
     },
     {
-        label: 'Cửa hàng',
+        label: 'Nông trại',
         to: '/stores',
         icon: 'fas fa-door-open',
         showHome: true
     },
     {
-        label: 'Hoá đơn điện tử',
+        label: 'Thiết bị',
         to: '/invoice-report',
         icon: 'fas fa-file-invoice-dollar',
         showHome: true
     },
     {
-        label: 'Cấu hình xuất HĐĐT',
+        label: 'Người dùng',
         to: '/invoice-config',
         icon: 'fas fa-sliders-h',
         showHome: true

@@ -6,17 +6,21 @@ import { createPinia, PiniaVuePlugin } from 'pinia';
 import { authStore, suiteStore } from '@/stores';
 import 'devextreme/dist/css/dx.common.css';
 import 'devextreme/dist/css/dx.light.css';
+import './plugins/element'
 import './plugins/devextreme'
+import '@/assets/scss/pages/main.scss';
+import '@/assets/scss/base/dx.generic.css';
 import ElementUI from 'element-ui';
 import 'element-ui/lib/theme-chalk/index.css';
 import moment from 'moment'
-import '@/assets/scss/main.scss'
 import { $ } from './utils/$'
+import { robotLoading } from './directives'
+
 
 moment.updateLocale('vi', {week: {dow: 1}})
 Vue.prototype.moment = moment
 Vue.use(ElementUI);
-
+Vue.use(robotLoading)
 Vue.config.productionTip = false
 Vue.use(VueRouter);
 
@@ -42,7 +46,7 @@ new Vue({
   mounted() {
     setTimeout(()=>{
       this.ready = true
-      router.push('/login');
+      // router.push('/login');
     }, 2000)
     // if (this.$authStored.isAuth && !this.$authStored.isHasProfile) {
     //     this.$authStored.getProfile()

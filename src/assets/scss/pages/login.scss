@@ -1,0 +1,40 @@
+// SETTINGS
+@import "../base/settings/settings.global";
+@import "../base/settings/settings.core";
+// TOOLS
+@import "../base/tools/tools.clearfix";
+@import "../base/tools/tools.font-size";
+@import "../base/tools/tools.font-family";
+@import "../base/tools/tools.mq";
+@import "../base/tools/tools.rotate";
+@import "../base/tools/tools.disable-anchor";
+// GENERICS
+@import "../base/generics/generic.normalize";
+@import "../base/generics/generic.box-sizing";
+@import "../base/generics/generic.reset";
+@import "../base/generics/generic.shared";
+// ELEMENTS
+@import "../base/elements/fontfaces";
+@import "../base/elements/page";
+@import "../base/elements/images";
+@import "../base/elements/input";
+// OBJECTS
+@import "../base/objects/form";
+// UTILITIES
+@import "../base/utilities/text";
+@import "../base/utilities/clearfix";
+@import "../base/utilities/spacings";
+// COMPONENTS
+@import "../base/components/alert";
+@import "../base/components/button-box";
+@import "../base/components/buttons";
+@import "../base/components/checkbox";
+@import "../base/mixins/all";
+@import "../base/others/mobile-friendly";
+@import "./login/component.login";
+
+.p-login {
+    background-color: #f9f9f9;
+    text-align: center;
+    width: 100%;
+}

@@ -1,0 +1,18 @@
+@mixin rotate($direction) {
+    $directions: (
+        'up': -90#{deg},
+        'left-up': -45#{deg},
+        'left': 0#{deg},
+        'left-down': 45#{deg},
+        'down': 90#{deg},
+        'right-down': 135#{deg},
+        'right': 180#{deg},
+        'right-up': 225#{deg}
+    );
+
+    -webkit-transform: rotate(map-get($directions, $direction));
+    -moz-transform: rotate(map_get($directions, $direction));
+    -ms-transform: rotate(map_get($directions, $direction));
+    -o-transform: rotate(map_get($directions, $direction));
+    transform: rotate(map_get($directions, $direction));
+}

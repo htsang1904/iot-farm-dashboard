@@ -1,0 +1,31 @@
+.c-alert {
+    padding: 10px;
+    color: #FFFFFF;
+    font-size: 1rem;
+
+    border: 1px solid $global-color-line;
+    border-radius: $global-radius;
+    margin-bottom: $global-spacing-margin-unit;
+
+    &--centered {
+        text-align: center;
+    }
+
+    &--info {
+        color: $global-color-info;
+        background-color: lighten($global-color-info, 30%);
+        border-color: lighten($global-color-info, 20%);
+    }
+
+    &--success {
+        color: $global-color-success;
+        background-color: lighten($global-color-success, 30%);
+        border-color: lighten($global-color-success, 20%);
+    }
+
+    &--danger {
+        color: $global-color-danger;
+        background-color: lighten($global-color-danger, 30%);
+        border-color: lighten($global-color-danger, 20%);
+    }
+}
