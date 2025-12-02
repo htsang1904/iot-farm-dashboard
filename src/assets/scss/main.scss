@@ -1,0 +1,14 @@
+@import './base/app';
+@import './base/layout';
+@import './variables.scss';
+
+* {
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+}
+body {
+    padding: 0;
+    margin: 0;
+    overflow: hidden;
+}

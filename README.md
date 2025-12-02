@@ -1,4 +1,4 @@
-# iot-farm
+# new-suite
 
 ## Project setup
 ```
